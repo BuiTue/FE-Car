@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="POST" class="form-horizontal" role="form">
+        <div class="form-group">
+          <legend>Login</legend>
+        </div>
+
+        <div class="form-group">
+          <label for="inputCarName" class="col-sm-2 control-label"
+            >CarName:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              name="CarName"
+              id="inputCarName"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-2 control-label"
+            >Password:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="password"
+              name="Password"
+              id="inputPassword"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="handleLogin()"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>

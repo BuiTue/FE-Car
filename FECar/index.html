@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FrontEnd Cty</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- <script>
+      // kiem tra neu chua login ( localStorage chua co gia tri)
+      var carLogin = JSON.parse(localStorage.getItem("userLogin"));
+      // kiem tra neu chua login ( localStorage chua co gia tri)
+      if (carLogin == null) {
+        window.open("./login.html", "_self");
+      }
+    </script> -->
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="POST" class="form-horizontal" role="form">
+        <div class="form-group">
+          <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <legend>Car Management</legend>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <h5 id="hello"></h5>
+          </div>
+
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="handleLogout()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputCarName" class="col-sm-2 control-label"
+            >CarName:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              name="CarName"
+              id="inputCarName"
+              class="form-control"
+              value=""
+              required="required"
+              pattern=""
+              title=""
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputLicensePlate" class="col-sm-2 control-label"
+            >LicensePlate :</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              name="LicensePlate
+            "
+              id="inputLicensePlate"
+              class="form-control"
+              value=""
+              required="required"
+              pattern=""
+              title=""
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputCompany" class="col-sm-2 control-label"
+            >Company:</label
+          >
+          <div class="col-sm-2">
+            <select
+              name="Company"
+              id="inputCompany"
+              class="form-control"
+              required="required"
+            >
+              <!-- <option value="">B</option> -->
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn btn-success" onclick="saveCar()">
+          Save
+        </button>
+      </form>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"></div>
+
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+          <input
+            type="text"
+            name="Search"
+            id="inputSearch"
+            class="form-control"
+            placeholder="nhap vao tu khoa"
+          />
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <button
+            type="button"
+            class="btn btn-default"
+            onclick="handleSearch()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="form-group">
+          <label for="inputPage" class="col-sm-3 control-label">Page:</label>
+          <div class="col-sm-3">
+            <select
+              style="width: 80px"
+              name="Page"
+              id="inputPage"
+              class="form-control"
+              required="required"
+              onchange="changeSize()"
+            >
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>carName</th>
+            <th>licensePlate</th>
+            <th>companyName</th>
+          </tr>
+        </thead>
+        <tbody id="carBody">
+          <!-- <tr>
+            <td>
+            <button type="button" class="btn btn-danger"onclick="">Delete</button>
+            
+            <button type="button" class="btn btn-warning" onclick="">Edit</button>
+            
+            </td>
+              
+          </tr> -->
+        </tbody>
+      </table>
+
+      <ul class="pagination" id="page">
+        <!-- <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li> -->
+      </ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
